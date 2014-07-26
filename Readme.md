@@ -6,6 +6,7 @@ A diet plugin for the official node.js mongodb driver:
 - Simplifies connecting to mongodb
 - Creates a mongodb wrapper for diet that can be used in local diet routes.
 - the `db.close()` is called automatically on `$.end()` so you don't have to close every connection on your own.
+- Very small, just 20kb
 
 ## **Install**
 `npm install diet-mongo`
