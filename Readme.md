@@ -1,5 +1,5 @@
 # **diet-mongo**
-This plugin is a wrapper for the official node.js mongodb driver:
+A diet plugin for the official node.js mongodb driver:
 [https://github.com/mongodb/node-mongodb-native][1]
 
 ## **Features**
