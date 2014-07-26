@@ -9,7 +9,9 @@ A diet plugin for the official node.js mongodb driver:
 - Very small, just 20kb
 
 ## **Install**
-`npm install diet-mongo`
+```
+npm install diet-mongo
+```
 
 ## **Usage**
 ```js
