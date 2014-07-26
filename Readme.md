@@ -32,13 +32,17 @@ app.get('/', db, function($){
 });
 ```
 
-## Methods
-The plugin returns a few methods when you call it:
+## **One Liner**
+If you only need to use one database, you can shorten your call to:
 ```js
-var mongo = app.plugin('diet-mongo');
+var db = app.plugin('diet-mongo').db('test');
 ```
+
+## **Methods**
+The plugin returns a few methods when you call it:
+
 **mongo.db**
-The database paremeter is require everything else is optional.
+The `database` paremeter is required everything else is optional.
 ```js
 // api
 var db = mongo.db(database, port, host, protocol);
