@@ -18,12 +18,18 @@ npm install diet-mongo
 // Require Diet
 require('diet');
 
-// New Domain
-app = new Domain('http://example.com/');
+// Create App
+var app = new App();
 
-// MongoDB
+// Configure Domain
+app.domain('http://example.com/');
+
+// Setup MongoDB
 var mongo = app.plugin('diet-mongo');
 var db = mongo.db('test');
+
+// Start the Application
+app.start();
 
 // Use in Route
 app.get('/', db, function($){
