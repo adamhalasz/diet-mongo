@@ -51,3 +51,5 @@ module.exports.db = function(database, port, host, protocol){
 	MongoClass.database = database;
 	return MongoClass;
 }
+
+module.parent.return()

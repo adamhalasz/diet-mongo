@@ -16,35 +16,35 @@ npm install diet-mongo
 ## **Usage**
 ```js
 // Require Diet
-require('diet');
+var server = require('diet')
 
 // Create App
-var app = new App();
+var app = new server()
 
 // Configure Domain
-app.domain('http://example.com/');
+app.domain('http://example.com/')
 
 // Setup MongoDB
-var mongo = app.plugin('diet-mongo');
-var db = mongo.db('test');
+var mongo = app.plugin('diet-mongo')
+var db = mongo.db('test')
 
 // Start the Application
-app.start();
+app.start()
 
 // Use in Route
 app.get('/', db, function($){
-    var users = $.db.collection('users');
+    var users = $.db.collection('users')
     users.findOne({ username: 'peter' }, function(err, item) {
-        $.data.user = item;
-        $.json(); // -> { user: { _id: '4309jg43f234', username: 'peter'} }
-    });
-});
+        $.data.user = item
+        $.json() // -> { user: { _id: '4309jg43f234', username: 'peter'} }
+    })
+})
 ```
 
 ## **One Liner**
 If you only need to use one database, you can shorten your call to:
 ```js
-var db = app.plugin('diet-mongo').db('test');
+var db = app.plugin('diet-mongo').db('test')
 ```
 
 ## **Methods**
@@ -54,11 +54,11 @@ The plugin returns a few methods when you call it:
 The `database` paremeter is required everything else is optional.
 ```js
 // api
-var db = mongo.db(database, port, host, protocol);
+var db = mongo.db(database, port, host, protocol)
 ```
 ```js
 // example - with the defaults
-var db = mongo.db('test', 27017, 'localhost', 'mongodb');
+var db = mongo.db('test', 27017, 'localhost', 'mongodb')
 ```
 
 **mongo.class**
